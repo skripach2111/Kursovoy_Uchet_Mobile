@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>rec/icons/shewronRight.png</file>
+        <file>rec/icons/shewronLeft.png</file>
+        <file>rec/icons/swipeMenuButtonIcon.png</file>
+        <file>rec/icons/menu1.png</file>
+    </qresource>
+</RCC>
