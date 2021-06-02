@@ -1,12 +1,13 @@
+CONFIG += qmltypes
+QML_IMPORT_NAME = com.scythestudio.scodes
+QML_IMPORT_MAJOR_VERSION = 1
+QT_INSTALL_QML
+
 QT += multimedia concurrent
 
 android {
     QT += androidextras
 }
-
-CONFIG += qmltypes
-QML_IMPORT_NAME = com.scythestudio.scodes
-QML_IMPORT_MAJOR_VERSION = 1
 
 INCLUDEPATH += \
     $$PWD/ \

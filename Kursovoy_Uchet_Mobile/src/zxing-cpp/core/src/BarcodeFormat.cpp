@@ -77,7 +77,7 @@ static std::string NormalizeFormatString(std::string str)
 static BarcodeFormat ParseFormatString(const std::string& str)
 {
 	auto pos = std::find_if(std::begin(FORMAT_STR), std::end(FORMAT_STR),
-							[str](auto fmt) { return NormalizeFormatString(fmt) == str; });
+                            [str](auto fmt) { return NormalizeFormatString(fmt) == str; });
 	return pos == std::end(FORMAT_STR) ? BarcodeFormat::NONE
 									   : BarcodeFormat(1 << (std::distance(std::begin(FORMAT_STR), pos) - 1));
 }

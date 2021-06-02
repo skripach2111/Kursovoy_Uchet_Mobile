@@ -1,7 +1,13 @@
 <RCC>
     <qresource prefix="/">
+        <file>qml/MainMenu.qml</file>
+        <file>qml/Border.qml</file>
+        <file>qml/ButtonMenu.qml</file>
         <file>main.qml</file>
-        <file>Border.qml</file>
-        <file>ButtonMenu.qml</file>
+        <file>qml/PageProperties.qml</file>
+        <file>qml/PageConnection.qml</file>
+        <file>qml/PageCamera.qml</file>
+        <file>qml/ScannerOverlay.qml</file>
+        <file>qml/MessageBox.qml</file>
     </qresource>
 </RCC>

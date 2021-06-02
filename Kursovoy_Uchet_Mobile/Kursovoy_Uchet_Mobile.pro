@@ -1,3 +1,5 @@
+include("src/SCodes.pri")
+
 QT += quick network
 
 CONFIG += c++17
@@ -9,7 +11,8 @@ CONFIG += c++17
 SOURCES += \
         appcore.cpp \
         connectioncontroller.cpp \
-        main.cpp
+        main.cpp \
+        settings.cpp
 
 RESOURCES += qml.qrc \
     icons.qrc
@@ -25,9 +28,25 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
+android {
+    DISTFILES += \
+        android/AndroidManifest.xml \
+        android/build.gradle \
+        android/gradle/wrapper/gradle-wrapper.jar \
+        android/gradle/wrapper/gradle-wrapper.properties \
+        android/gradlew \
+        android/gradlew.bat \
+        android/res/values/libs.xml
+
+    ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
+
+    ANDROID_ABIS = armeabi-v7a
+}
+
 HEADERS += \
     appcore.h \
-    connectioncontroller.h
+    connectioncontroller.h \
+    settings.h
 
 DISTFILES += \
     Border.qml \
